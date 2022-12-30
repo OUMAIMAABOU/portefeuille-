@@ -1,9 +1,10 @@
-// const {verifyToken}=require('../Middleware/AuthentificationMiddleware')
-// const router = require("express").Router();
-// const Authentification = require("../Controllers/AuthentificationController.js");
-// module.exports = app =>
-// {    
-//     router.get("/livreur/me", verifyToken(['Livreure']),Authentification.welcome)
+const router = require('express').Router()
+const Projet=require('../Controllers/ProjetController')
+module.exports=ProjetRouter=>{
+    router.post('/CreateProjet',Projet.CreateProjet)
+    router.delete('/deleteProjets/:id',Projet.deleteProjets)
+    router.put('/modifierProjet/:id',Projet.ModifierProjet)
+    router.get('/selectProjets',Projet.VoirProjet)
 
-//   app.use('/api/auth/', router);
-// };
+    ProjetRouter.use('/api/auth/',router)
+}

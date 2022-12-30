@@ -17,6 +17,7 @@ const Admin = new mongoose.Schema(
   adress:String,
   Introduction:String,
   metier:String,
+  role:String
 
 },{timestamps:true})
 

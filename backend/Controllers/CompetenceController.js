@@ -31,7 +31,7 @@ exports.CreateCompetence=async(req,res)=>{
     }
  }
 
- // // method : get => url : api/auth/selectCompetences =>acces : private
+ // // method : get => url : api/auth/selectCompetences =>acces : public
  exports.VoirCompetence=async(_,res)=>{
     try{
       res.status(200).send( await Competence.find())

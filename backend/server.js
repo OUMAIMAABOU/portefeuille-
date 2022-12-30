@@ -13,8 +13,8 @@ app.use(express.urlencoded({extended:true}))
 
 require("./Routers/AuthentificationRouter")(app);
 require("./Routers/CompetenceRouter")(app);
-// require("./Routers/LivreurRouter")(app);
-// require("./Routers/ManagementRouter")(app);
+require("./Routers/ExperienceRouter")(app);
+require("./Routers/ProjetRouter")(app);
 
 
 app.use(globalError)
