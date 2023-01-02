@@ -4,6 +4,6 @@ module.exports = app =>
 {    
   router.post('/register',Authentification.Register)
   router.post('/login',Authentification.Login)
-  router.post('/user',Authentification.VoirAdmin)
+  router.get('/user',Authentification.VoirAdmin)
   app.use('/api/auth/', router);
 };
